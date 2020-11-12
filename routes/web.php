@@ -20,3 +20,19 @@ Route::get('/', function () {
 Route::get('stock', function () {
     return view('stock');
 });
+
+Route::get('selling', function () {
+    return view('selling');
+});
+
+Route::get('order', function () {
+    return view('order');
+});
+
+Route::get('purchase', function () {
+    return view('purchase');
+});
+
+Route::get('debt', function () {
+    return view('debt');
+});

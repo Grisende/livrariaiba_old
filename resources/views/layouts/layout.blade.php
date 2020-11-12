@@ -27,19 +27,22 @@
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="/"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                     </li>
                     <li>
                         <a href="stock"><i class="fas fa-cubes"></i> Estoque</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-shipping-fast"></i> Encomendas</a>
+                        <a href="order"><i class="fas fa-shipping-fast"></i> Encomendas</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-shopping-basket"></i> Compras</a>
+                        <a href="purchase"><i class="fas fa-shopping-basket"></i> Compras</a>
                     </li>
                     <li>
-                        <a href="#"><i class="fas fa-cash-register"></i> Vendas</a>
+                        <a href="selling"><i class="fas fa-cash-register"></i> Vendas</a>
+                    </li>
+                    <li>
+                        <a href="debt"><i class="fas fa-money-bill"></i> Em Dívida</a>
                     </li>
                 </ul>
             </div>
@@ -47,7 +50,7 @@
             <div class="config">
                 <ul>
                     <li>
-                        <a href="#"><i class="fas fa-sign-out-alt"></i></i> Logout</a>
+                        <a href="/#"><i class="fas fa-sign-out-alt"></i></i> Logout</a>
                     </li>
                 </ul>
             </div>
