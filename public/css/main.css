@@ -1,0 +1,6 @@
+main {
+    display: block;
+    height: calc (100% - 10px);
+    width: calc(100% - 250px);
+    background-color: #fff;
+}

@@ -1,0 +1,80 @@
+.flex-dashboard {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-dashboard .sidebar a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.flex-dashboard .sidebar a:hover {
+    color: #eee;
+}
+
+.sidebar {
+    display: block;
+    height: calc (100% - 5px);
+    width: 250px;
+    background-color: rgba(50, 168, 82, 0.9);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.sidebar .sidebar-title {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1px solid black;
+}
+
+.sidebar .sidebar-title img {
+    height: 50px;
+    width: 50px;
+}
+
+.sidebar .sidebar-title h2 {
+    margin-top: 2%;
+    font-size: 18px;
+    color: #fff;
+}
+
+div .menu {
+    margin-top: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+div .menu ul {
+    list-style-type: none;
+}
+
+div .menu ul li {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+div .menu ul li:hover {
+    background-color: rgba(50, 168, 82, 0.5);
+}
+
+div .config {
+    margin-top: 20px;
+}
+
+div .config ul {
+    list-style-type: none;
+}
+
+div .config ul li {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+div .config ul li:hover {
+    background-color: rgba(50, 168, 82, 0.5);
+}

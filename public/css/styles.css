@@ -1,2 +1,4 @@
 @import 'default.css';
-@import 'dashboard.css';
+@import 'main.css';
+@import 'header.css';
+@import 'sidebar.css';

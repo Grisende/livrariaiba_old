@@ -1,0 +1,16 @@
+.flex-dashboard main header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    background-color: rgba(50, 168, 82, 0.9);
+    padding: 10px 30px;
+    border-radius: 10px;
+    margin: 5px 5px 0px 0px;
+}
+
+.flex-dashboard header h2 {
+    font-size: 18px;
+    color: #fff;
+}

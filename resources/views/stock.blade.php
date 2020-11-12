@@ -1,12 +1,12 @@
 @extends('layouts.layout')
 
-@section('title', 'Dashboard')
+@section('title', 'Estoque')
     
 @section('content')
 
     @section('header')
         <header>
-            <h2><i class="fas fa-tachometer-alt"></i></i> Dashboard</h2>
+            <h2><i class="fas fa-cubes"></i> Estoque</h2>
         </header>
     @endsection
     
