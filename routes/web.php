@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,22 +18,12 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('stock', function () {
-    return view('stock');
-});
+Route::resource('stock', BookController::class);
 
-Route::get('selling', function () {
-    return view('selling');
-});
+Route::resource('purchase', PurchaseController::class);
 
-Route::get('order', function () {
-    return view('order');
-});
+Route::resource('order', OrderController::class);
 
-Route::get('purchase', function () {
-    return view('purchase');
-});
+Route::resource('selling', SellingController::class);
 
-Route::get('debt', function () {
-    return view('debt');
-});
+Route::resource('debt', DebtController::class);

@@ -16,8 +16,8 @@ class CreateModelBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->double('purchase_price');
-            $table->double('selling_price');
+            $table->double('purchase_price', 10, 2);
+            $table->double('selling_price', 10, 2);
             $table->integer('quantity');
             $table->timestamps();
         });

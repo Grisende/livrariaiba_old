@@ -1,0 +1,65 @@
+.flex-dashboard main .add-book {
+    margin: 40px 5% 0;
+}
+
+.flex-dashboard main .add-book a{
+    text-decoration: none;
+    color: rgba(50, 168, 82, 0.9);
+    padding: 5px;
+    border: 1px solid rgba(50, 168, 82, 0.9);
+    border-radius: 10px;
+}
+
+.flex-dashboard main .add-book a:hover{
+    color: #fefefe;
+    background-color: rgba(50, 168, 82, 0.9);
+    padding: 5px;
+    border: 1px solid #fefefe;
+    border-radius: 10px;
+}
+
+.flex-dashboard main .stock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 120px);
+    padding: 10px 30px; 
+    margin-top: -3%;
+}
+
+.flex-dashboard main .stock .table-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    width: 918px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    background-color: rgba(50, 168, 82, 0.9);
+}
+
+.flex-dashboard main .stock .table-content h2{
+    margin-top: 1%;
+    color: #fff;
+    font-size: 25px;
+}
+
+.flex-dashboard main .stock .table-content table{
+    display: block;
+    text-align: center;
+    background-color: #fefefe;
+    font-size: 15px;
+}
+
+.flex-dashboard main .stock .table-content table tbody tr td a > i{
+    text-decoration: none;
+}
+
+.flex-dashboard main .stock .table-content table tbody tr td a .fa-pen {
+    color: #0358ad;
+}
+
+.flex-dashboard main .stock .table-content table tbody tr td a .fa-times {
+    color: red;
+}
