@@ -18,7 +18,7 @@ class CreateModelSellingsTable extends Migration
             $table->integer('id_book')->unsigned();
             $table->foreign('id_book')->references('id')->on('books')->onDelete('cascade')->onUpdate('cascade');
             $table->string('title');
-            $table->double('selling_price', 10, 2);
+            $table->double('selling_price', 10, 2)->nullable();
             $table->integer('quantity');
             $table->string('payment_method');
             $table->string('customer_name');

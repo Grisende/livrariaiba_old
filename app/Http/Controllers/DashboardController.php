@@ -3,16 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\ModelBook;
 
-class BookController extends Controller
+class DashboardController extends Controller
 {
-    private $objBook;
-
-    public function __construct()
-    {
-        $this->objBook = new ModelBook();
-    }
     /**
      * Display a listing of the resource.
      *
@@ -20,8 +13,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $book = $this->objBook->all();
-        return view('stock', compact('book'));
+        return view('dashboard');
     }
 
     /**
@@ -31,7 +23,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        return view('create/book');
+        //
     }
 
     /**
@@ -42,16 +34,7 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $create = $this->objBook->create([
-            'title'=>$request->title,
-            'purchase_price'=>$request->purchase_price,
-            'selling_price'=>$request->selling_price,
-            'quantity'=>$request->quantity
-        ]);
-
-        if($create){
-            return redirect('stock');
-        }
+        //
     }
 
     /**
@@ -73,8 +56,7 @@ class BookController extends Controller
      */
     public function edit($id)
     {
-        $book = $this->objBook->find($id);
-        return view('create/book', compact('book'));
+        //
     }
 
     /**
@@ -86,16 +68,7 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $update = $this->objBook->where(['id'=>$id])->update([
-            'title'=>$request->title,
-            'purchase_price'=>$request->purchase_price,
-            'selling_price'=>$request->selling_price,
-            'quantity'=>$request->quantity
-        ]);
-
-        if($update){
-            return redirect('stock');
-        }
+        //
     }
 
     /**

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ModelBook extends Model
 {
     protected $table = 'books';
+    protected $fillable = ['title','purchase_price','selling_price','quantity','created_at','updated_at'];
 
     public function relPurchase()
     {

@@ -4,10 +4,8 @@
     
 @section('content')
 
-    @section('header')
-        <header>
-            <h2><i class="fas fa-money-bill"></i> Em Dívida</h2>
-        </header>
-    @endsection
+    <header>
+        <h2><i class="fas fa-money-bill"></i> Em Dívida</h2>
+    </header>
     
 @endsection

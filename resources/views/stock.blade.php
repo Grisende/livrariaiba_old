@@ -9,13 +9,14 @@
     </header>
 
     <div class="add-book">
-        <a href="#"><i class="fas fa-plus-circle"></i> Adicionar</a>
+        <a href="{{url('stock/create')}}"><i class="fas fa-plus-circle"></i> Adicionar</a>
     </div>
 
     <div class="stock">
         <div class="table-content">
             <h2>Produtos</h2>
             <table class="table table-responsive ">
+                @csrf
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
@@ -35,11 +36,11 @@
                             <td scope="row">{{$books->id}}</td> 
                             <td scope="row">{{$books->title}}</td> 
                             <td scope="row">{{$books->quantity}}</td> 
-                            <td scope="row">R$ {{$books->purchase_price}},00</td> 
-                            <td scope="row">R$ {{$books->selling_price}},00</td> 
+                            <td scope="row">R$ {{$books->purchase_price}}</td> 
+                            <td scope="row">R$ {{$books->selling_price}}</td> 
                             <td scope="row">{{date_format($books->created_at, 'd/m/Y H:i:s')}}</td> 
                             <td scope="row">{{date_format($books->updated_at, 'd/m/Y H:i:s')}}</td> 
-                            <td scope="row"><a href="#"><i class="fas fa-pen"></i></a></td>
+                            <td scope="row"><a href="{{url("stock/$books->id/edit")}}"><i class="fas fa-pen"></i></a></td>
                             <td scope="row"><a href="#"><i class="fas fa-times"></i></a></td>
                         </tr>
                     @endforeach

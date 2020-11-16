@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateModelBooksTable extends Migration
 {
@@ -16,8 +17,8 @@ class CreateModelBooksTable extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->double('purchase_price', 10, 2);
-            $table->double('selling_price', 10, 2);
+            $table->double('purchase_price', 10, 2)->nullable();
+            $table->double('selling_price', 10, 2)->nullable();
             $table->integer('quantity');
             $table->timestamps();
         });
