@@ -41,7 +41,7 @@
                             <td scope="row">{{date_format($books->created_at, 'd/m/Y H:i:s')}}</td> 
                             <td scope="row">{{date_format($books->updated_at, 'd/m/Y H:i:s')}}</td> 
                             <td scope="row"><a href="{{url("stock/$books->id/edit")}}"><i class="fas fa-pen"></i></a></td>
-                            <td scope="row"><a href="#"><i class="fas fa-times"></i></a></td>
+                            <td scope="row"><a href="{{url("stock/$books->id")}}" class="js-del-book"><i class="fas fa-times"></i></a></td>
                         </tr>
                     @endforeach
                 </tbody>

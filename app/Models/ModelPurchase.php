@@ -9,8 +9,5 @@ class ModelPurchase extends Model
 {
     protected $table = 'purchase';
 
-    public function relBook()
-    {
-        return $this->hasMany('App\Models\ModelBook', 'id', 'id_book');
-    }
+    protected $fillable = ['title', 'id_book', 'purchase_price','selling_price','quantity', 'store', 'payment_method', 'status', 'order', 'created_at','updated_at'];  
 }

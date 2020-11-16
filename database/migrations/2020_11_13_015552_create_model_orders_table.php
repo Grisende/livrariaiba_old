@@ -15,8 +15,7 @@ class CreateModelOrdersTable extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_book')->unsigned();
-            $table->foreign('id_book')->references('id')->on('books')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_book');
             $table->string('title');
             $table->integer('quantity');
             $table->string('customer_name');

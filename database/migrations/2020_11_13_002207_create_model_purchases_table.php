@@ -15,11 +15,10 @@ class CreateModelPurchasesTable extends Migration
     {
         Schema::create('purchase', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_book')->unsigned();
-            $table->foreign('id_book')->references('id')->on('books')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_book');
             $table->string('title');
-            $table->double('purchase_price', 10, 2)->nullable();
-            $table->double('selling_price', 10, 2)->nullable();
+            $table->float('purchase_price', 255)->nullable();
+            $table->float('selling_price', 255)->nullable();
             $table->integer('quantity');
             $table->string('store');
             $table->string('payment_method');

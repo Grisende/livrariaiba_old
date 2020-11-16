@@ -26,11 +26,11 @@
             </div>
             <div class="form-group">
                 <label for="purchase_price">Preço de Compra</label>
-                <input type="text" class="form-control" id="purchase_price" name="purchase_price" value="{{$book->purchase_price ?? ''}}" required>
+                <input type="text" class="form-control money2" id="purchase_price" name="purchase_price" value="{{$book->purchase_price ?? ''}}" required>
             </div>
             <div class="form-group">
                 <label for="purchase_price">Preço de Venda</label>
-                <input type="text" class="form-control" id="selling_price" name="selling_price" value="{{$book->selling_price ?? ''}}" required>
+                <input type="text" class="form-control money2" id="selling_price" name="selling_price" value="{{$book->selling_price ?? ''}}" required>
             </div>
             <div class="form-group">
                 <label for="quantity">Quantidade</label>

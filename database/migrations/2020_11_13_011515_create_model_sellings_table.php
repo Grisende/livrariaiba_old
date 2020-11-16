@@ -15,10 +15,9 @@ class CreateModelSellingsTable extends Migration
     {
         Schema::create('selling', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_book')->unsigned();
-            $table->foreign('id_book')->references('id')->on('books')->onDelete('cascade')->onUpdate('cascade');
+            $table->integer('id_book');
             $table->string('title');
-            $table->double('selling_price', 10, 2)->nullable();
+            $table->float('selling_price', 255)->nullable();
             $table->integer('quantity');
             $table->string('payment_method');
             $table->string('customer_name');
