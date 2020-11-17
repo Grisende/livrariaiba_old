@@ -6,6 +6,7 @@ use App\Http\Controllers\SellingController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\DebtController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PurchaseExistingBookController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Route::get('/', function () {
 Route::resource('dashboard', DashboardController::class);
 Route::resource('stock', BookController::class);
 Route::resource('purchase', PurchaseController::class);
+Route::resource('purchaseExistingBook', PurchaseExistingBookController::class);
 Route::resource('order', OrderController::class);
 Route::resource('selling', SellingController::class);
 Route::resource('debt', DebtController::class);

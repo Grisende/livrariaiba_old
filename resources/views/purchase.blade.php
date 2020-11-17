@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'Estoque')
+@section('title', 'Compras')
     
 @section('content')
 
@@ -10,7 +10,7 @@
 
     <div class="add-purchase">
         <a href="{{url('purchase/create')}}"><i class="fas fa-plus-circle"></i> Novo</a>
-        <a href="{{url('purchase/create')}}"><i class="fas fa-plus-circle"></i> Existente</a>
+        <a href="{{url('purchaseExistingBook/create')}}"><i class="fas fa-plus-circle"></i> Existente</a>
     </div>
 
     <div class="purchase">
@@ -49,17 +49,24 @@
                             elseif ($purchases->payment_method == "billet"){
                                 $payment = "boleto";
                             }
+
+                            if ($purchases->status == "on_course"){
+                                $status = "Em Trânsito";
+                            }
+                            elseif ($purchases->payment_method == "delivered"){
+                                $status = "Entregue";
+                            }
                         @endphp
                         <tr>
                             <td scope="row">{{$purchases->id}}</td> 
-                            <td scope="row">{{$purchases->id_bbok}}</td> 
+                            <td scope="row">{{$purchases->id_book}}</td> 
                             <td scope="row">{{$purchases->title}}</td> 
                             <td scope="row">{{$purchases->quantity}}</td> 
                             <td scope="row">R$ {{$purchases->purchase_price}}</td> 
                             <td scope="row">R$ {{$purchases->selling_price}}</td> 
                             <td scope="row">{{$purchases->store}}</td>
                             <td scope="row">{{$payment ?? ''}}</td> 
-                            <td scope="row">{{$purchases->status}}</td> 
+                            <td scope="row">{{$status ?? ''}}</td> 
                             <td scope="row">{{$purchases->order}}</td> 
                             <td scope="row"><a href="{{url("purchase/$purchases->id/edit")}}"><i class="fas fa-pen"></i></a></td>
                             <td scope="row"><a href="{{url("purchase/$purchases->id")}}" class="js-del-purchase"><i class="fas fa-times"></i></a></td>
