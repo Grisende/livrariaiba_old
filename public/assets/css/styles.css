@@ -4,6 +4,10 @@
 @import 'sidebar.css';
 @import 'header.css';
 @import 'stock.css';
+@import 'order.css';
 @import 'purchase.css';
+@import 'selling.css';
 @import 'create/book.css';
+@import 'create/order.css';
 @import 'create/purchase.css';
+@import 'create/selling.css';

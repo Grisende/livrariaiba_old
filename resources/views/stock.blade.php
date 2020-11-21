@@ -8,10 +8,6 @@
         <h2><i class="fas fa-cubes"></i> Estoque</h2>
     </header>
 
-    <div class="add-book">
-        <a href="{{url('stock/create')}}"><i class="fas fa-plus-circle"></i> Adicionar</a>
-    </div>
-
     <div class="stock">
         <div class="table-content">
             <h2>Produtos</h2>

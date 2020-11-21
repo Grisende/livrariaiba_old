@@ -127,10 +127,9 @@ class PurchaseController extends Controller
      */
     public function destroy($id)
     {
-        {
-            $del = $this->objPurchase->destroy($id);
     
-            return($del)?"sim":"não";
-        }
+        $del = $this->objPurchase->destroy($id);
+
+        return($del)?"sim":"não";
     }
 }

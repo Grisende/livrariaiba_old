@@ -22,7 +22,7 @@
                 </div>
                 <div class="col">
                     <label for="quantity">Quantidade</label>
-                    <input type="text" type="number" class="form-control" id="quantity" name="quantity" required>
+                    <input type="number" class="form-control" id="quantity" name="quantity" required>
                 </div>
             </div>
 

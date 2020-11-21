@@ -64,7 +64,7 @@ class PurchaseExistingBookController extends Controller
             'quantity'=>$book->quantity+$request->quantity,
         ]);
 
-        if($create){
+        if($create && $update){
             return redirect('purchase');
         }
     }
@@ -100,7 +100,23 @@ class PurchaseExistingBookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $book = $this->objBook->find($request->id_book);
+
+        $update = $this->objPurchase->where(['id'=>$id])->update([
+            'id_book'=>$request->id_book,
+            'title'=>$book->title,
+            'purchase_price'=>$book->purchase_price,
+            'selling_price'=>$book->selling_price,
+            'quantity'=>$request->quantity,
+            'store'=>$request->store,
+            'payment_method'=>$request->payment_method,
+            'status'=>$request->status,
+            'order'=>$request->order
+        ]);
+
+        if($update){
+            return redirect('purchase');
+        }
     }
 
     /**

@@ -1,8 +1,8 @@
-.flex-dashboard main .add-book {
+.flex-dashboard main .add-selling {
     margin: 40px 5% 0;
 }
 
-.flex-dashboard main .add-book a {
+.flex-dashboard main .add-selling a {
     text-decoration: none;
     color: rgba(50, 168, 82, 0.9);
     padding: 10px;
@@ -10,54 +10,55 @@
     border-radius: 10px;
 }
 
-.flex-dashboard main .add-book a:hover {
+.flex-dashboard main .add-selling a:hover {
     color: #fefefe;
     background-color: rgba(50, 168, 82, 0.9);
     border: 1px solid #fefefe;
     border-radius: 10px;
 }
 
-.flex-dashboard main .stock {
+.flex-dashboard main .selling {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: calc(100% - 120px);
     padding: 10px 30px;
+    margin-top: -3%;
 }
 
-.flex-dashboard main .stock .table-content {
+.flex-dashboard main .selling .table-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 80%;
-    width: 80%;
+    width: 100%;
     border: 1px solid #bbb;
     border-radius: 10px;
     background-color: rgba(50, 168, 82, 0.9);
 }
 
-.flex-dashboard main .stock .table-content h2 {
+.flex-dashboard main .selling .table-content h2 {
     margin-top: 1%;
     color: #fff;
     font-size: 25px;
 }
 
-.flex-dashboard main .stock .table-content table {
+.flex-dashboard main .selling .table-content table {
     display: block;
     text-align: center;
     background-color: #fefefe;
     font-size: 15px;
 }
 
-.flex-dashboard main .stock .table-content table tbody tr td a>i {
+.flex-dashboard main .selling .table-content table tbody tr td a>i {
     text-decoration: none;
 }
 
-.flex-dashboard main .stock .table-content table tbody tr td a .fa-pen {
+.flex-dashboard main .selling .table-content table tbody tr td a .fa-pen {
     color: #0358ad;
 }
 
-.flex-dashboard main .stock .table-content table tbody tr td a .fa-times {
+.flex-dashboard main .selling .table-content table tbody tr td a .fa-times {
     color: red;
 }

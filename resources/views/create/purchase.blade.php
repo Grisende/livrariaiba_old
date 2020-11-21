@@ -55,7 +55,7 @@
             </div>
             <div class="col-2">
                 <label for="quantity">Quantidade</label>
-                <input type="text" type="number" class="form-control" id="quantity" name="quantity" value="{{ $purchase->quantity ?? '' }}" required>
+                <input type="number" class="form-control" id="quantity" name="quantity" value="{{ $purchase->quantity ?? '' }}" required>
             </div>
         </div>
 
