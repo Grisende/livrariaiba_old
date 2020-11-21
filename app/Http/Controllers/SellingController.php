@@ -65,7 +65,7 @@ class SellingController extends Controller
         ]);
 
         if($create && $update){
-            return redirect('purchase');
+            return redirect('selling');
         }
     }
 

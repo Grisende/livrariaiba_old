@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label for="quantity">Quantidade</label>
-                <input type="text" type="number" class="form-control" id="quantity" name="quantity" value="{{$book->quantity ?? ''}}" required>
+                <input type="number" class="form-control" id="quantity" name="quantity" value="{{$book->quantity ?? ''}}" required>
             </div>
             <div class="form-group text-center">
                 <button class="btn btn-primary"> Salvar</button>

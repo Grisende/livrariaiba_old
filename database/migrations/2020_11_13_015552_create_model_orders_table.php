@@ -20,7 +20,7 @@ class CreateModelOrdersTable extends Migration
             $table->integer('quantity');
             $table->string('customer_name');
             $table->string('status');
-            $table->string('obs');
+            $table->string('obs')->nullable();
             $table->timestamps();
         });
     }

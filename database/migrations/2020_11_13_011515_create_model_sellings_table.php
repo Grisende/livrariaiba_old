@@ -21,7 +21,7 @@ class CreateModelSellingsTable extends Migration
             $table->integer('quantity');
             $table->string('payment_method');
             $table->string('customer_name');
-            $table->string('obs');
+            $table->string('obs')->nullable();
             $table->timestamps();
         });
     }

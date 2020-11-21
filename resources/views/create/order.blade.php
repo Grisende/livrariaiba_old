@@ -48,7 +48,7 @@
             <div class="row">
                 <div class="col">
                     <label for="obs">Observações</label>
-                    <textarea class="form-control" id="obs" name="obs" required>{{$order->obs ?? ''}}</textarea>
+                    <textarea class="form-control" id="obs" name="obs">{{$order->obs ?? ''}}</textarea>
                 </div>
             </div>
             

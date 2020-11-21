@@ -25,7 +25,6 @@
                         <th scope="col">Preço de Venda</th>
                         <th scope="col">Cliente</th>
                         <th scope="col">Método de Pagamento</th>
-                        <th scope="col">Status</th>
                         <th scope="col">Observações</th>
                         <th></th>
                     </tr>
@@ -45,6 +44,10 @@
                             elseif ($sellings->payment_method == "billet"){
                                 $payment = "boleto";
                             }
+                            elseif ($sellings->payment_method == "debt"){
+                                $payment = "Fiado";
+                            }
+                            
                         @endphp
                         <tr>
                             <td scope="row">{{$sellings->id_book}}</td> 

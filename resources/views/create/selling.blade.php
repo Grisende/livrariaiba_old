@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col">
                 <label for="obs">Observações</label>
-                <textarea class="form-control" id="obs" name="obs" required>{{ $selling->obs ?? '' }}</textarea>
+                <textarea class="form-control" id="obs" name="obs">{{ $selling->obs ?? '' }}</textarea>
             </div>
         </div>
 

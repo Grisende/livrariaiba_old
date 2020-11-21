@@ -3,9 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ModelSelling;
 
 class DebtController extends Controller
 {
+    private $objSelling;
+
+    public function __construct()
+    {
+        $this->objSelling = new ModelSelling();
+    }
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +20,9 @@ class DebtController extends Controller
      */
     public function index()
     {
-        return view('debt');
+        // $payment = 'debt';
+        $selling = $this->objSelling->where('payment_method','=', 'debt')->get();
+        return view('debt', compact('selling'));
     }
 
     /**
