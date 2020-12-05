@@ -7,6 +7,18 @@
     <header>
         <h2><i class="fas fa-cubes"></i> Estoque</h2>
     </header>
+    
+    <div class="book-value">
+        <label>Valor em estoque:  
+            @php
+            $value = 0;
+                foreach ($book as $books) {
+                    $value=$value+($books->purchase_price*$books->quantity);
+                }
+                echo $value;
+            @endphp
+        </label>
+    </div>
 
     <div class="stock">
         <div class="table-content">

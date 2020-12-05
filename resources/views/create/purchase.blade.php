@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-4">
                 <label for="payment_method">Método de Pagamento</label>
-                <select class="form-control" id="payment_method" name="payment_method" required>
+                <select class="form-control" id="payment_method" name="payment_method">
                     <option value="{{ $purchase->payment_method ?? '' }}">{{ $payment ?? '' }}</option>
                     <option value="money">Dinheiro</option>
                     <option value="credit_card">Cartão de Crédito</option>
@@ -72,18 +72,18 @@
             </div>
             <div class="col-8">
                 <label for="store">Loja</label>
-                <input type="text" class="form-control" id="store" name="store" value="{{ $purchase->store ?? '' }}"  required>
+                <input type="text" class="form-control" id="store" name="store" value="{{ $purchase->store ?? '' }}">
             </div>
         </div>
 
         <div class="row">
             <div class="col">
                 <label for="order">Pedido</label>
-                <input type="text" class="form-control" id="order" name="order" value="{{ $purchase->order ?? '' }}" required>
+                <input type="text" class="form-control" id="order" name="order" value="{{ $purchase->order ?? '' }}">
             </div>
             <div class="col">
                 <label for="status">Status</label>
-                <select class="form-control" id="status" name="status" required>
+                <select class="form-control" id="status" name="status">
                     <option value=""></option>
                     <option value="on_course">Em Trânsito</option>
                     <option value="delivered">Entregue</option>

@@ -1,8 +1,13 @@
-.flex-dashboard main .add-book {
+/* .flex-dashboard main .add-book {
     margin: 40px 5% 0;
+} */
+
+.flex-dashboard main .book-value {
+    margin: 30px 5% -30px;
 }
 
-.flex-dashboard main .add-book a {
+
+/* .flex-dashboard main .add-book a {
     text-decoration: none;
     color: rgba(50, 168, 82, 0.9);
     padding: 10px;
@@ -15,7 +20,7 @@
     background-color: rgba(50, 168, 82, 0.9);
     border: 1px solid #fefefe;
     border-radius: 10px;
-}
+} */
 
 .flex-dashboard main .stock {
     display: flex;

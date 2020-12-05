@@ -1,0 +1,47 @@
+.flex-dashboard main .cancel-orderNewBook-add {
+    margin: 40px 5% 0;
+}
+
+.flex-dashboard main .cancel-orderNewBook-add a {
+    text-decoration: none;
+    color: red;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.flex-dashboard main .cancel-orderNewBook-add a:hover {
+    color: #fefefe;
+    background-color: red;
+    border: 1px solid #fefefe;
+    border-radius: 10px;
+}
+
+.flex-dashboard main .create-orderNewBook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    height: calc(100% - 120px);
+    padding: 10px 30px;
+    margin-top: -3%;
+}
+
+.flex-dashboard main .create-orderNewBook form {
+    color: #fefefe;
+    width: 60%;
+    padding: 10px;
+    background-color: rgba(50, 168, 82, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.flex-dashboard main .create-orderNewBook form .row {
+    margin-top: 2%;
+}
+
+.flex-dashboard main .create-orderNewBook form .btn {
+    width: 100%;
+    margin-top: 4%;
+}

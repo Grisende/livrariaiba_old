@@ -26,9 +26,9 @@
 
             <div class="menu">
                 <ul>
-                    <li>
+                    {{-- <li>
                         <a href="{{url('dashboard')}}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a href="{{url('stock')}}"><i class="fas fa-cubes"></i> Estoque</a>
                     </li>
@@ -47,13 +47,13 @@
                 </ul>
             </div>
 
-            <div class="config">
+            {{-- <div class="config">
                 <ul>
                     <li>
                         <a href="/#"><i class="fas fa-sign-out-alt"></i></i> Logout</a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
         
         <main>

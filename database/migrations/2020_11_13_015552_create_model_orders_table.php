@@ -15,7 +15,6 @@ class CreateModelOrdersTable extends Migration
     {
         Schema::create('order', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('id_book');
             $table->string('title');
             $table->integer('quantity');
             $table->string('customer_name');

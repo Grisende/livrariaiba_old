@@ -9,7 +9,8 @@
     </header>
 
     <div class="add-order">
-        <a href="{{url('order/create')}}"><i class="fas fa-plus-circle"></i> Novo</a>
+        <a href="{{url('orderNewBook/create')}}"><i class="fas fa-plus-circle"></i> Novo</a>
+        <a href="{{url('order/create')}}"><i class="fas fa-plus-circle"></i> Existente</a>
     </div>
 
     <div class="order">
@@ -19,7 +20,6 @@
                 @csrf
                 <thead>
                     <tr>
-                        <th scope="col">Código do livro</th>
                         <th scope="col">Título</th>
                         <th scope="col">Quantidade</th>
                         <th scope="col">Cliente</th>
@@ -27,7 +27,7 @@
                         <th scope="col">Observações</th>
                         <th scope="col">Criado em:</th>
                         <th scope="col">Atualizado em:</th>
-                        <th></th>
+                        {{-- <th></th> --}}
                         <th></th>
                     </tr>
                 </thead>
@@ -42,7 +42,6 @@
                             }
                         @endphp
                         <tr>
-                            <td scope="row">{{$orders->id_book}}</td> 
                             <td scope="row">{{$orders->title}}</td> 
                             <td scope="row">{{$orders->quantity}}</td> 
                             <td scope="row">{{$orders->customer_name}}</td> 
@@ -50,7 +49,7 @@
                             <td scope="row">{{$orders->obs}}</td> 
                             <td scope="row">{{date_format($orders->created_at, 'd/m/Y H:i:s')}}</td> 
                             <td scope="row">{{date_format($orders->updated_at, 'd/m/Y H:i:s')}}</td> 
-                            <td scope="row"><a href="{{url("order/$orders->id/edit")}}"><i class="fas fa-pen"></i></a></td>
+                            {{-- <td scope="row"><a href="{{url("order/$orders->id/edit")}}"><i class="fas fa-pen"></i></a></td> --}}
                             <td scope="row"><a href="{{url("order/$orders->id")}}" class="js-del-order"><i class="fas fa-times"></i></a></td>
                         </tr>
                     @endforeach
