@@ -31,6 +31,7 @@
                         <th scope="col">Status</th>
                         <th scope="col">Pedido</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -67,6 +68,7 @@
                             <td scope="row">{{$payment ?? ''}}</td> 
                             <td scope="row">{{$status ?? ''}}</td> 
                             <td scope="row">{{$purchases->order}}</td> 
+                            <td scope="row"><a href="{{url("purchase/$purchases->id/edit")}}"><i class="fas fa-pen"></i></a></td>
                             <td scope="row"><a href="{{url("purchase/$purchases->id")}}" class="js-del-purchase"><i class="fas fa-times"></i></a></td>
                         </tr>
                     @endforeach

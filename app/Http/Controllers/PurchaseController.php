@@ -47,8 +47,16 @@ class PurchaseController extends Controller
      */
     public function store(Request $request)
     {
+
+        $create_book = $this->objBook->create([
+            'title'=>$request->title,
+            'purchase_price'=>$request->purchase_price,
+            'selling_price'=>$request->selling_price,
+            'quantity'=>$request->quantity
+        ]);
+
         $create = $this->objPurchase->create([
-            'id_book'=>$request->id_book+1,
+            'id_book'=>$create_book->id,
             'title'=>$request->title,
             'purchase_price'=>$request->purchase_price,
             'selling_price'=>$request->selling_price,
@@ -57,13 +65,6 @@ class PurchaseController extends Controller
             'payment_method'=>$request->payment_method,
             'status'=>$request->status,
             'order'=>$request->order
-        ]);
-
-        $create_book = $this->objBook->create([
-            'title'=>$request->title,
-            'purchase_price'=>$request->purchase_price,
-            'selling_price'=>$request->selling_price,
-            'quantity'=>$request->quantity
         ]);
 
         if($create && $create_book){
@@ -103,6 +104,8 @@ class PurchaseController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $book = $this->objBook->find($request->id_book);
+
         $update = $this->objPurchase->where(['id'=>$id])->update([
             'title'=>$request->title,
             'purchase_price'=>$request->purchase_price,
@@ -114,9 +117,16 @@ class PurchaseController extends Controller
             'order'=>$request->order
         ]);
 
-        if($update){
+        $update_book = $this->objBook->where(['id'=>$request->id_book])->update([
+            // 'quantity'=>$book->quantity,
+            'purchase_price'=>$request->purchase_price,
+            'selling_price'=>$request->selling_price
+        ]);
+
+        if($update && $update_book){
             return redirect('purchase');
         }
+        
     }
 
     /**

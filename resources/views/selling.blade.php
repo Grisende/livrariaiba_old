@@ -27,6 +27,7 @@
                         <th scope="col">Método de Pagamento</th>
                         <th scope="col">Observações</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,10 +43,10 @@
                                 $payment = "Cartão de Débito";
                             }
                             elseif ($sellings->payment_method == "billet"){
-                                $payment = "boleto";
+                                $payment = "Boleto";
                             }
                             elseif ($sellings->payment_method == "debt"){
-                                $payment = "Fiado";
+                                $payment = "À pagar";
                             }
                             
                         @endphp
@@ -57,6 +58,7 @@
                             <td scope="row">{{$sellings->customer_name}}</td>
                             <td scope="row">{{$payment ?? ''}}</td> 
                             <td scope="row">{{$sellings->obs}}</td>
+                            <td scope="row"><a href="{{url("selling/$sellings->id/edit")}}"><i class="fas fa-pen"></i></a></td>
                             <td scope="row"><a href="{{url("selling/$sellings->id")}}" class="js-del-selling"><i class="fas fa-times"></i></a></td>
                         </tr>
                     @endforeach

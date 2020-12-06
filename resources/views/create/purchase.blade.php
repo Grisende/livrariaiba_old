@@ -18,20 +18,29 @@
     <div class="create-purchase">
         @if (isset($purchase))
             <form class="inline-form" method="POST" action="{{ url("purchase/$purchase->id") }}">
+                <input type="text" class="form-control" id="id_book" name="id_book" value="{{ $purchase->id_book}}" hidden>
+                <input type="text" class="form-control" id="id" name="id" value="{{ $purchase->id}}" hidden>
                 @method('PUT')
                 @php
-                if ($purchase->payment_method == "money"){
-                $payment = "Dinheiro";
-                }
-                elseif($purchase->payment_method == "credit_card"){
-                $payment = "Cartão de Crédito";
-                }
-                elseif ($purchase->payment_method == "debt_card"){
-                $payment = "Cartão de Débito";
-                }
-                elseif ($purchase->payment_method == "billet"){
-                $payment = "boleto";
-                }
+                    if ($purchase->payment_method == "money"){
+                    $payment = "Dinheiro";
+                    }
+                    elseif($purchase->payment_method == "credit_card"){
+                    $payment = "Cartão de Crédito";
+                    }
+                    elseif ($purchase->payment_method == "debt_card"){
+                    $payment = "Cartão de Débito";
+                    }
+                    elseif ($purchase->payment_method == "billet"){
+                    $payment = "boleto";
+                    }
+                    if ($purchase->status == "on_course"){
+                        $status = "Em Trânsito";
+                    }
+                    elseif ($purchase->status == "delivered"){
+                        $status = "Entregue";
+                    }
+                    $value = $purchase->quantity;
                 @endphp
             @else
                 <form class="inline-form" method="POST" action="{{ url('purchase') }}">
@@ -84,7 +93,7 @@
             <div class="col">
                 <label for="status">Status</label>
                 <select class="form-control" id="status" name="status">
-                    <option value=""></option>
+                    <option value="{{ $purchase->status ?? '' }}">{{ $status ?? '' }}</option>
                     <option value="on_course">Em Trânsito</option>
                     <option value="delivered">Entregue</option>
                 </select>
